@@ -3,105 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio website for [Your Name]">
-    <title>Portfolio - [Your Name]</title>
+    <meta name="description" content="Professional portfolio website for Nkosi David Shumba - Web Developer & Computer Science Student">
+    <title>Nkosi David Shumba | Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Preconnect to external resources for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <!--
-    ============================================================
-    ASSIGNMENT 1: RESPONSIVE PORTFOLIO WEBSITE
-    CSC4035 Web Programming and Technologies
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    Instructions:
-    1. Complete all TODO sections below
-    2. Use semantic HTML5 elements
-    3. Ensure all images have alt attributes
-    4. Ensure all form inputs have labels
-    5. Test responsiveness at multiple breakpoints
-    ============================================================
-    -->
-
-    <!-- Navigation -->
-    <header class="header">
-        <nav class="nav">
-            <!-- TODO: Create navigation with links to each section
-                 Requirements:
-                 - Logo/site title
-                 - Navigation links (Home, About, Projects, Contact)
-                 - Mobile-friendly (hamburger menu optional)
-                 - Active state indication
-            -->
+    <!-- Navigation Header -->
+    <header class="header" role="banner">
+        <nav class="nav container" role="navigation" aria-label="Main navigation">
             <div class="nav__logo">
-                <a href="#home">[Your Name]</a>
+                <a href="#home">Nkosi David Shumba</a>
             </div>
+            
+            <!-- Mobile menu toggle (CSS-only implementation) -->
+            <input type="checkbox" id="nav-toggle" class="nav__toggle" aria-hidden="true">
+            <label for="nav-toggle" class="nav__hamburger" aria-label="Toggle navigation">
+                <span class="nav__hamburger-icon"></span>
+            </label>
+            
             <ul class="nav__menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav__link">Home</a></li>
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#projects" class="nav__link">Projects</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
-        <section id="home" class="hero">
-            <!-- TODO: Create hero section
-                 Requirements:
-                 - Your name (h1)
-                 - Professional tagline
-                 - Call-to-action button
-                 - Consider using Flexbox for layout
-            -->
-            <div class="hero__content">
-                <h1>Your Name</h1>
+        <section id="home" class="hero" aria-labelledby="hero-heading">
+            <div class="hero__content container">
+                <h1 id="hero-heading" class="hero__title">Nkosi David Shumba</h1>
                 <p class="hero__tagline">
-                    <!-- TODO: Add your professional tagline -->
-                    Web Developer | Designer | Problem Solver
+                    Web Developer | Computer Science Student | Building Accessible Digital Experiences
                 </p>
-                <a href="#contact" class="btn btn--primary">Get In Touch</a>
+                <p class="hero__subtitle">
+                    Crafting responsive, user-centered websites with clean code and modern CSS techniques
+                </p>
+                <div class="hero__actions">
+                    <a href="#projects" class="btn btn--primary">View My Work</a>
+                    <a href="#contact" class="btn btn--outline">Get In Touch</a>
+                </div>
             </div>
+            <div class="hero__decoration" aria-hidden="true"></div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="about">
-            <!-- TODO: Create about section
-                 Requirements:
-                 - Section heading (h2)
-                 - Profile image with alt text
-                 - Professional bio (150+ words)
-                 - Skills list
-                 - Use CSS Grid or Flexbox for layout
-            -->
+        <section id="about" class="about section" aria-labelledby="about-heading">
             <div class="container">
-                <h2>About Me</h2>
+                <h2 id="about-heading" class="section__title">About Me</h2>
+                
                 <div class="about__content">
                     <div class="about__image">
-                        <!-- TODO: Add your profile image -->
-                        <img src="images/profile-placeholder.jpg" alt="Profile photo of [Your Name]">
+                        <!-- Replace with your actual profile image -->
+                        <img 
+                            src="images/profile.jpg" 
+                            alt="Portrait of Nkosi David Shumba, a web developer and computer science student"
+                            width="300"
+                            height="300"
+                            loading="lazy"
+                        >
                     </div>
+                    
                     <div class="about__text">
                         <p>
-                            <!-- TODO: Write your professional bio (150+ words)
-                                 Include:
-                                 - Your background
-                                 - Your interests in web development
-                                 - Your goals
-                                 - What makes you unique
-                            -->
-                            [Your professional bio goes here. Write at least 150 words about yourself,
-                            your background, your passion for web development, and your goals.
-                            This is your opportunity to introduce yourself to potential employers or clients.]
+                            I am a passionate web developer and computer science student at the University of Zambia, 
+                            specializing in creating responsive, accessible, and user-centered web experiences. My journey 
+                            into web development began with a curiosity about how websites function, which quickly evolved 
+                            into a dedication to mastering HTML5, CSS3, and JavaScript.
                         </p>
-                        <h3>Skills</h3>
-                        <ul class="skills-list">
-                            <!-- TODO: Add your skills -->
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>JavaScript</li>
-                            <li>Responsive Design</li>
-                            <!-- Add more skills -->
+                        <p>
+                            I enjoy solving complex problems through clean code and thoughtful design, and I'm particularly 
+                            interested in inclusive design practices that ensure digital products work for everyone. Beyond 
+                            coding, I actively explore modern CSS techniques like Grid and Flexbox to build flexible layouts 
+                            that adapt seamlessly across devices.
+                        </p>
+                        <p>
+                            My goal is to contribute to meaningful projects that make a positive impact while continuing to 
+                            grow as a well-rounded developer. What sets me apart is my commitment to lifelong learning, 
+                            attention to detail, and belief that technology should empower communities and bridge digital divides.
+                        </p>
+                        
+                        <h3 class="about__skills-title">Technical Skills</h3>
+                        <ul class="skills-list" role="list">
+                            <li>HTML5 & Semantic Markup</li>
+                            <li>CSS3 (Flexbox, Grid, Variables, Animations)</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>Responsive & Mobile-First Design</li>
+                            <li>Web Accessibility (WCAG 2.1)</li>
+                            <li>Git & GitHub Workflow</li>
+                            <li>Performance Optimization</li>
                         </ul>
                     </div>
                 </div>
@@ -109,110 +107,145 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <!-- TODO: Create projects section
-                 Requirements:
-                 - Section heading (h2)
-                 - Minimum 3 project cards
-                 - Each card: image, title, description, link(s)
-                 - Use CSS Grid for card layout
-            -->
+        <section id="projects" class="projects section" aria-labelledby="projects-heading">
             <div class="container">
-                <h2>My Projects</h2>
+                <h2 id="projects-heading" class="section__title">My Projects</h2>
+                <p class="section__subtitle">A selection of my recent web development work</p>
+                
                 <div class="projects__grid">
                     <!-- Project Card 1 -->
-                    <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project1-placeholder.jpg" alt="Screenshot of Project 1">
+                    <article class="project-card" aria-labelledby="project-1-title">
+                        <div class="project-card__image">
+                            <img 
+                                src="images/project-dashboard.jpg" 
+                                alt="Analytics dashboard interface with charts and data visualization"
+                                width="400"
+                                height="250"
+                                loading="lazy"
+                            >
+                        </div>
                         <div class="project-card__content">
-                            <h3>Project Title 1</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
+                            <h3 id="project-1-title" class="project-card__title">Analytics Dashboard</h3>
+                            <p class="project-card__description">
+                                A responsive admin dashboard built with HTML, CSS Grid, and vanilla JavaScript. 
+                                Features include dark mode toggle, interactive data cards, mobile navigation, 
+                                and CSS custom properties for theming.
                             </p>
+                            <ul class="project-card__tech" role="list">
+                                <li>HTML5</li>
+                                <li>CSS Grid</li>
+                                <li>JavaScript</li>
+                                <li>CSS Variables</li>
+                            </ul>
                             <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                                <a href="#" class="btn btn--small" target="_blank" rel="noopener">Live Demo</a>
+                                <a href="#" class="btn btn--small btn--outline" target="_blank" rel="noopener">GitHub</a>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project Card 2 -->
-                    <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project2-placeholder.jpg" alt="Screenshot of Project 2">
+                    <article class="project-card" aria-labelledby="project-2-title">
+                        <div class="project-card__image">
+                            <img 
+                                src="images/project-ecommerce.jpg" 
+                                alt="E-commerce product page with cart functionality and responsive layout"
+                                width="400"
+                                height="250"
+                                loading="lazy"
+                            >
+                        </div>
                         <div class="project-card__content">
-                            <h3>Project Title 2</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
+                            <h3 id="project-2-title" class="project-card__title">E-Commerce Storefront</h3>
+                            <p class="project-card__description">
+                                A mobile-first e-commerce interface featuring product filtering, cart management, 
+                                and checkout flow. Built with accessibility in mind, including keyboard navigation 
+                                and ARIA labels for screen readers.
                             </p>
+                            <ul class="project-card__tech" role="list">
+                                <li>Flexbox Layout</li>
+                                <li>CSS Animations</li>
+                                <li>Form Validation</li>
+                                <li>Responsive Images</li>
+                            </ul>
                             <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                                <a href="#" class="btn btn--small" target="_blank" rel="noopener">Live Demo</a>
+                                <a href="#" class="btn btn--small btn--outline" target="_blank" rel="noopener">GitHub</a>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project Card 3 -->
-                    <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project3-placeholder.jpg" alt="Screenshot of Project 3">
+                    <article class="project-card" aria-labelledby="project-3-title">
+                        <div class="project-card__image">
+                            <img 
+                                src="images/project-portfolio.jpg" 
+                                alt="Creative portfolio website with project gallery and contact form"
+                                width="400"
+                                height="250"
+                                loading="lazy"
+                            >
+                        </div>
                         <div class="project-card__content">
-                            <h3>Project Title 3</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
+                            <h3 id="project-3-title" class="project-card__title">Creative Portfolio Template</h3>
+                            <p class="project-card__description">
+                                A reusable portfolio template featuring CSS Grid layouts, smooth scrolling navigation, 
+                                and a contact form with HTML5 validation. Designed with CSS custom properties for 
+                                easy theming and maintenance.
                             </p>
+                            <ul class="project-card__tech" role="list">
+                                <li>CSS Grid</li>
+                                <li>Media Queries</li>
+                                <li>HTML5 Forms</li>
+                                <li>SEO Optimized</li>
+                            </ul>
                             <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                                <a href="#" class="btn btn--small" target="_blank" rel="noopener">Live Demo</a>
+                                <a href="#" class="btn btn--small btn--outline" target="_blank" rel="noopener">GitHub</a>
                             </div>
                         </div>
                     </article>
-
-                    <!-- TODO: Add more project cards if desired -->
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <!-- TODO: Create contact section
-                 Requirements:
-                 - Section heading (h2)
-                 - Contact form with:
-                   - Name field (required)
-                   - Email field (required, type="email")
-                   - Message textarea (required)
-                   - Submit button
-                 - All inputs must have associated labels
-                 - Use HTML5 validation attributes
-            -->
+        <section id="contact" class="contact section" aria-labelledby="contact-heading">
             <div class="container">
-                <h2>Contact Me</h2>
-                <form class="contact__form" action="#" method="POST">
+                <h2 id="contact-heading" class="section__title">Get In Touch</h2>
+                <p class="section__subtitle">Have a project in mind or just want to say hello? I'd love to hear from you!</p>
+                
+                <form class="contact__form" action="#" method="POST" novalidate>
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name">Full Name <span class="required" aria-hidden="true">*</span></label>
                         <input
                             type="text"
                             id="name"
                             name="name"
                             required
-                            placeholder="Your Name"
                             minlength="2"
+                            maxlength="100"
+                            placeholder="e.g., Nkosi David Shumba"
+                            autocomplete="name"
+                            aria-required="true"
                         >
+                        <small class="form__error" id="name-error" role="alert"></small>
                     </div>
+                    
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Email Address <span class="required" aria-hidden="true">*</span></label>
                         <input
                             type="email"
                             id="email"
                             name="email"
                             required
                             placeholder="your.email@example.com"
+                            autocomplete="email"
+                            aria-required="true"
                         >
+                        <small class="form__error" id="email-error" role="alert"></small>
                     </div>
+                    
                     <div class="form-group">
                         <label for="subject">Subject</label>
                         <input
@@ -220,42 +253,124 @@
                             id="subject"
                             name="subject"
                             placeholder="What is this regarding?"
+                            maxlength="200"
+                            autocomplete="off"
                         >
                     </div>
+                    
                     <div class="form-group">
-                        <label for="message">Message</label>
+                        <label for="message">Message <span class="required" aria-hidden="true">*</span></label>
                         <textarea
                             id="message"
                             name="message"
                             required
-                            rows="5"
-                            placeholder="Your message..."
+                            rows="6"
                             minlength="10"
+                            maxlength="2000"
+                            placeholder="Tell me about your project or question..."
+                            aria-required="true"
                         ></textarea>
+                        <small class="form__error" id="message-error" role="alert"></small>
                     </div>
-                    <button type="submit" class="btn btn--primary">Send Message</button>
+                    
+                    <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+                    
+                    <p class="form__note">
+                        <small>* Required fields. I typically respond within 1-2 business days.</small>
+                    </p>
                 </form>
+                
+                <!-- Alternative contact methods -->
+                <div class="contact__alternatives">
+                    <p>Or reach out directly:</p>
+                    <ul class="contact__links" role="list">
+                        <li>
+                            <a href="mailto:nkosi.shumba@example.com" class="contact__link">
+                                nkosi.shumba@example.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/nkosishumba" class="contact__link" target="_blank" rel="noopener">
+                                LinkedIn Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/nkosi01" class="contact__link" target="_blank" rel="noopener">
+                                GitHub Profile
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <!-- TODO: Create footer
-             Requirements:
-             - Copyright notice
-             - Social media links (optional)
-             - Back to top link (optional)
-        -->
-        <div class="container">
-            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-            <nav class="footer__social">
-                <!-- TODO: Add your social media links -->
-                <a href="#" aria-label="GitHub">GitHub</a>
-                <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                <a href="#" aria-label="Twitter">Twitter</a>
+    <footer class="footer" role="contentinfo">
+        <div class="container footer__content">
+            <div class="footer__info">
+                <p>&copy; <time datetime="2026">2026</time> Nkosi David Shumba. All rights reserved.</p>
+                <p class="footer__location">Lusaka, Zambia</p>
+            </div>
+            
+            <nav class="footer__social" aria-label="Social media profiles">
+                <a href="https://github.com/nkosi01" aria-label="GitHub profile" target="_blank" rel="noopener">
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/nkosishumba" aria-label="LinkedIn profile" target="_blank" rel="noopener">
+                    LinkedIn
+                </a>
+                <a href="https://twitter.com/nkosishumba" aria-label="Twitter profile" target="_blank" rel="noopener">
+                    Twitter
+                </a>
             </nav>
+            
+            <a href="#home" class="footer__back-to-top" aria-label="Back to top of page">
+                ↑ Top
+            </a>
         </div>
     </footer>
+
+    <!-- Optional: JavaScript for enhanced form validation (keep minimal per assignment rules) -->
+    <script>
+        // Simple client-side validation enhancement (optional)
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact__form');
+            
+            form?.addEventListener('submit', function(e) {
+                // Let HTML5 validation handle basics, just enhance UX
+                const name = document.getElementById('name');
+                const email = document.getElementById('email');
+                const message = document.getElementById('message');
+                
+                // Clear previous errors
+                document.querySelectorAll('.form__error').forEach(el => el.textContent = '');
+                
+                let valid = true;
+                
+                if (name.validity.tooShort) {
+                    document.getElementById('name-error').textContent = 'Name must be at least 2 characters';
+                    valid = false;
+                }
+                
+                if (email.validity.typeMismatch) {
+                    document.getElementById('email-error').textContent = 'Please enter a valid email address';
+                    valid = false;
+                }
+                
+                if (message.validity.tooShort) {
+                    document.getElementById('message-error').textContent = 'Message must be at least 10 characters';
+                    valid = false;
+                }
+                
+                if (!valid) {
+                    e.preventDefault();
+                    // Focus first invalid field
+                    const firstError = form.querySelector(':invalid');
+                    firstError?.focus();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
